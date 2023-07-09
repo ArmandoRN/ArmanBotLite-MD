@@ -44,7 +44,7 @@ text = m.quoted.text
 } else return conn.reply(m.chat, lenguajeGB.smsOpenai1() + `\n*${usedPrefix + command}* ${lenguajeGB.smsOpenai2()}\n\n*${usedPrefix + command}* ${lenguajeGB.smsOpenai3()}` , m)
 try {
 await conn.sendPresenceUpdate('composing', m.chat)
-        let syms = ``
+        let syms = `Actuaras como un Bot de WhatsApp el cual fue creado por GataNina-Li, tu seras GataBotLite-MD`
         let res = await gpt.ChatGpt(text, syms)
          await m.reply(res.text)
 /*let ia1 = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_id=${m.sender}`)  
@@ -120,13 +120,13 @@ ${location || err}
 
 ${lenguajeGB.smsGit13()}
 ${type || err}`
-await conn.sendFile(m.chat, thumb || ArmandoMenu.getRandom(), 'githubstalk.jpg', cont, fkontak) 
+await conn.sendFile(m.chat, thumb || gataMenu.getRandom(), 'githubstalk.jpg', cont, fkontak) 
 } catch (e) {
 reportError(e)}  
 break   
         
 case isCommand5:
-if (!text) return m.reply(lenguajeGB.smsMalused2() + `*${usedPrefix + command}* ArmanBot`)
+if (!text) return m.reply(lenguajeGB.smsMalused2() + `*${usedPrefix + command}* GataBot`)
 try{
 await conn.reply(m.chat, global.wait, m)
 let results = await yts(text)

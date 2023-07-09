@@ -36,7 +36,7 @@ await m.react(notsent)
 
 switch (true) {     
 case isCommand1:
-if (!text) return m.reply(lenguajeGB.smsMalused2() + `\n*${usedPrefix + command} *`)
+if (!text) return m.reply(lenguajeGB.smsMalused2() + `\n*${usedPrefix + command} Gata*`)
 try{
 const res = await googleImage(text)
 let image = res.getRandom()

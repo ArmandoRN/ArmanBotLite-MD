@@ -1,4 +1,4 @@
-//CÓDIGO ADAPTADO POR https://github.com/ArmandoRN | @armando_name
+//CÓDIGO ADAPTADO POR https://github.com/GataNina-Li | @gata_dios
 
 let handler = async (m, { conn, text, usedPrefix, command }) => { 
 let cometido
@@ -22,7 +22,7 @@ let coger = `🥵 *Acaban de coger a ${text}* 🥵
 ●
 █▄
 █ ▄█▀█● *${text}*
-*¡*`.trim()
+*¡Te han cogido!* 😫🍆`.trim()
 
 await conn.reply(m.chat, coger, m, { mentions: [m.sender, text.replace('@', '') + '@s.whatsapp.net'] })
 }

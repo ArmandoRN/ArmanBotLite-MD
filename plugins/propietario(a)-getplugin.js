@@ -1,4 +1,4 @@
-//CÓDIGO CREADO Y ADAPTADO POR https://github.com/ArmandoRN
+//CÓDIGO CREADO Y ADAPTADO POR https://github.com/GataNina-Li
 
 import fs from 'fs'
 import path from 'path'

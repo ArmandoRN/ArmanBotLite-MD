@@ -2,7 +2,7 @@
 
 #!/data/data/com.termux/files/usr/bin/bash 
 # Interpretación determinada para la ejecución     
-COMANDOS = "pkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install -y yarn\ngit clone https://github.com/ArmandoRN/ArmanBotLite-MD\ncd ArmanBotLite-MD\nyarn install\nnpm install\nnpm start"
+COMANDOS = "pkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install -y yarn\ngit clone https://github.com/GataNina-Li/GataBotLite-MD\ncd GataBotLite-MD\nyarn install\nnpm install\nnpm start"
 
 echo -e "\e[35m
 ─█▀▀█ ───░█ ░█─░█ ░█▀▀▀█ ▀▀█▀▀ ░█▀▀▀ 　 ░█─── ─█▀▀█ 　 ░█▀▀█ ─█▀▀█ ░█▄─░█ ▀▀█▀▀ ─█▀▀█ ░█─── ░█─── ─█▀▀█ 
@@ -152,11 +152,11 @@ echo -e "\e[35m
 ╚═╝░░╚═╝░░  ░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═════╝░░╚════╝░░░░╚═╝░░░  ╚══════╝╚═╝░░░╚═╝░░░╚══════╝\n\e[0m"
 
 echo -e "\033[1;35m"
-git clone https://github.com/ArmandoRN/ArmanBotLite-MD.git
+git clone https://github.com/GataNina-Li/GataBotLite-MD.git
 echo -e "\033[01;32m\033[01mLa clonación se ha descargado e instalado correctamente.\nThe clone has been downloaded and installed successfully.\n\033[0m"
 
 echo -e "\033[01;32m\033[01mCambiando al directorio del repositorio!!\nChanging to the repository directory!!\n\033[0m" 
-cd ArmanBotLite-MD
+cd GataBotLite-MD
 
 echo -e "\e[36m
 █░█ █▀█ █▀▄ ▄▀█ ▀█▀ █▀▀   █▄█ ▄▀█ █▀█ █▄░█
@@ -221,5 +221,5 @@ _________░▒▓██
 _______░▒▓██
 _____░▒▓██\n\e[0m"
     
-echo -e "\033[01;32m\033[01mIniciando ArmanBotLite!!\nStarting ArmanBotLite!!\n\033[0m"
+echo -e "\033[01;32m\033[01mIniciando GataBotLite!!\nStarting GataBotLite!!\n\033[0m"
 npm start

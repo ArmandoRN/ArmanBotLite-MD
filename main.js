@@ -66,13 +66,13 @@ if (global.db) setInterval(async () => {
 if (global.db.data) await global.db.write()
 }, 30 * 1000)
  
-global.authFile = `ArmanBotSession`
+global.authFile = `GataBotSession`
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 const connectionOptions = {
 logger: P({ level: 'silent' }),
 printQRInTerminal: true,
 auth: state,
-browser: ['ArmanBotLite-MD','Edge','107.0.1418.26'],
+browser: ['GataBotLite-MD','Edge','107.0.1418.26'],
 }
 
 global.conn = makeWASocket(connectionOptions)
@@ -81,7 +81,7 @@ conn.isInit = false
 if (!opts['test']) {
 if (global.db) setInterval(async () => {
 if (global.db.data) await global.db.write()
-if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', "JadiBot"], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '2', '-type', 'f', '-delete'])))}, 30 * 1000)}
+if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', "GataJadiBot"], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '2', '-type', 'f', '-delete'])))}, 30 * 1000)}
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
 async function connectionUpdate(update) {
@@ -97,7 +97,7 @@ if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.bold.yellow(lenguajeGB['smsCodigoQR']()))}
 if (connection == 'open') {
-//console.log(chalk.bold.green(lenguajeGB['smsConexion']()))
+console.log(chalk.bold.green(lenguajeGB['smsConexion']()))
 }
 if (connection == 'close') {
 console.log(chalk.bold.hex('#F15E5E')(lenguajeGB['smsConexionOFF']())) 
@@ -242,29 +242,29 @@ unlinkSync(filePath)})
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./ArmanBotSession")
+let directorio = readdirSync("./GataBotSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') || file.startsWith('session-') || file.startsWith('app-')
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./ArmanBotSession/${files}`)
+unlinkSync(`./GataBotSession/${files}`)
 })
 } 
 
 function purgeSessionSB() {
 try {
-const listaDirectorios = readdirSync('./JadiBot/');
+const listaDirectorios = readdirSync('./GataJadiBot/');
 let SBprekey = [];
 listaDirectorios.forEach(directorio => {
-if (statSync(`./JadiBot/${directorio}`).isDirectory()) {
-const DSBPreKeys = readdirSync(`./JadiBot/${directorio}`).filter(fileInDir => {
+if (statSync(`./GataJadiBot/${directorio}`).isDirectory()) {
+const DSBPreKeys = readdirSync(`./GataJadiBot/${directorio}`).filter(fileInDir => {
 return fileInDir.startsWith('pre-key-') || fileInDir.startsWith('app-') || fileInDir.startsWith('session-')
 })
 SBprekey = [...SBprekey, ...DSBPreKeys];
 DSBPreKeys.forEach(fileInDir => {
 if (fileInDir !== 'creds.json') {
-unlinkSync(`./JadiBot/${directorio}/${fileInDir}`)
+unlinkSync(`./GataJadiBot/${directorio}/${fileInDir}`)
 }})
 }})
 if (SBprekey.length === 0) {
@@ -276,7 +276,7 @@ console.log(chalk.bold.red(lenguajeGB.smspurgeSessionSB3() + err));
 }}
 
 function purgeOldFiles() {
-const directories = ['./ArmanBotSession/', './JadiBot/']
+const directories = ['./GataBotSession/', './GataJadiBot/']
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
 if (err) throw err
