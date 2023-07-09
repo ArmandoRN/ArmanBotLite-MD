@@ -3,6 +3,8 @@ import { createRequire } from "module";
 import { fileURLToPath } from 'url'
 import { setupMaster, fork } from 'cluster'
 import { watchFile, unwatchFile } from 'fs'
+import cfonts from 'cfonts';
+import chalk from "chalk"
 import { createInterface } from 'readline'
 import yargs from 'yargs'
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -13,7 +15,7 @@ const rl = createInterface(process.stdin, process.stdout)
 
 try {
 const startColor = chalk.rgb(Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256));
-console.log(startColor('❤️ Iniciando...'));
+console.log(startColor(' Iniciando...'));
 
 function getRandomColor() {
 const colors = ['system', 'black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'gray', 'redBright', 'greenBright', 'yellowBright', 'blueBright', 'magentaBright', 'cyanBright', 'whiteBright', 'candy'];

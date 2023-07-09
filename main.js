@@ -9,7 +9,7 @@ import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, wa
 import yargs from 'yargs';
 import { spawn } from 'child_process';
 import lodash from 'lodash';
-import chalk from 'chalk';
+//import chalk from 'chalk';
 import syntaxerror from 'syntax-error';
 import { tmpdir } from 'os';
 import { format } from 'util';
@@ -95,12 +95,12 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.bold.yellow(lenguajeGB['smsCodigoQR']()))}
+//console.log(chalk.bold.yellow(lenguajeGB['smsCodigoQR']()))}
 if (connection == 'open') {
-console.log(chalk.bold.green(lenguajeGB['smsConexion']()))
+//console.log(chalk.bold.green(lenguajeGB['smsConexion']()))
 }
 if (connection == 'close') {
-console.log(chalk.bold.hex('#F15E5E')(lenguajeGB['smsConexionOFF']())) 
+//console.log(chalk.bold.hex('#F15E5E')(lenguajeGB['smsConexionOFF']())) 
 }}
 process.on('uncaughtException', console.error)
 
@@ -268,11 +268,11 @@ unlinkSync(`./JadiBot/${directorio}/${fileInDir}`)
 }})
 }})
 if (SBprekey.length === 0) {
-console.log(chalk.bold.green(lenguajeGB.smspurgeSessionSB1()));
+//console.log(chalk.bold.green(lenguajeGB.smspurgeSessionSB1()));
 } else {
-console.log(chalk.bold.cyanBright(lenguajeGB.smspurgeSessionSB2()));
+//console.log(chalk.bold.cyanBright(lenguajeGB.smspurgeSessionSB2()));
 }} catch (err) {
-console.log(chalk.bold.red(lenguajeGB.smspurgeSessionSB3() + err));
+//console.log(chalk.bold.red(lenguajeGB.smspurgeSessionSB3() + err));
 }}
 
 function purgeOldFiles() {
@@ -285,27 +285,27 @@ if (file !== 'creds.json') {
 const filePath = path.join(dir, file);
 unlinkSync(filePath, err => {
 if (err) {
-console.log(chalk.bold.red(`${lenguajeGB.smspurgeOldFiles3()} ${file} ${lenguajeGB.smspurgeOldFiles4()}` + err))
+//console.log(chalk.bold.red(`${lenguajeGB.smspurgeOldFiles3()} ${file} ${lenguajeGB.smspurgeOldFiles4()}` + err))
 } else {
-console.log(chalk.bold.green(`${lenguajeGB.smspurgeOldFiles1()} ${file} ${lenguajeGB.smspurgeOldFiles2()}`))
+//console.log(chalk.bold.green(`${lenguajeGB.smspurgeOldFiles1()} ${file} ${lenguajeGB.smspurgeOldFiles2()}`))
 } }) }
 }) }) }) }
 
 setInterval(async () => {
 await clearTmp()        
-console.log(chalk.bold.cyanBright(lenguajeGB.smsClearTmp()))}, 1000 * 60 * 4) 
+//console.log(chalk.bold.cyanBright(lenguajeGB.smsClearTmp()))}, 1000 * 60 * 4) 
 
 setInterval(async () => {
 await purgeSession()
-console.log(chalk.bold.cyanBright(lenguajeGB.smspurgeSession()))}, 1000 * 60 * 30)
+//console.log(chalk.bold.cyanBright(lenguajeGB.smspurgeSession()))}, 1000 * 60 * 30)
 
 setInterval(async () => {
 await purgeSessionSB()}, 1000 * 60 * 30)
 
 setInterval(async () => {
 await purgeOldFiles()
-console.log(chalk.bold.cyanBright(lenguajeGB.smspurgeOldFiles()))}, 1000 * 60 * 30)
+//console.log(chalk.bold.cyanBright(lenguajeGB.smspurgeOldFiles()))}, 1000 * 60 * 30)
 
 _quickTest()
-.then(() => conn.logger.info(chalk.bold(lenguajeGB['smsCargando']())))
+//.then(() => conn.logger.info(chalk.bold(lenguajeGB['smsCargando']())))
 .catch(console.error)
