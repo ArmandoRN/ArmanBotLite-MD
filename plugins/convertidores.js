@@ -27,7 +27,7 @@ mime = q.mediaType || ''
 if (!/sticker/.test(mime)) return m.reply(notStickerMessage)
 media = await q.download()
 out = await webp2png(media).catch(_ => null) || Buffer.alloc(0)
-await conn.sendFile(m.chat, out, 'error.png', null, m)
+await conn.sendFile(m.chat, out, null, m)
 } catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
@@ -93,7 +93,7 @@ out = await ffmpeg(media, [
 '-c:a', 'copy',
 '-shortest'
 ], 'mp3', 'mp4')}
-await conn.sendFile(m.chat, out, 'error.mp4', lenguajeGB.smsConVIDEO3(), m, 0, { thumbnail: out }) 
+await conn.sendFile(m.chat, out, lenguajeGB.smsConVIDEO3(), m, 0, { thumbnail: out }) 
 } catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
@@ -108,7 +108,7 @@ if (!/(mp4)/.test(mime)) return m.reply(lenguajeGB.smsConGIF2() + mime)
 try{ 
 m.reply(global.wait)
 media = await q.download()
-conn.sendMessage(m.chat, { video: media, gifPlayback: true, caption: lenguajeGB.smsConGIF3() }, { quoted: m })
+conn.sendMessage(m.chat, { caption: lenguajeGB.smsConGIF3() }, { quoted: m })
 } catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
@@ -126,7 +126,7 @@ let audio = await toPTT(media, 'mp4')
 if (!audio.data && !/audio/.test(mime)) return m.reply(lenguajeGB.smsConVN3())
 if (!audio.data && !/video/.test(mime)) return m.reply(lenguajeGB.smsConVN4())
 try{
-let aa = conn.sendFile(m.chat, audio.data, 'error.mp3', '', m, true, { mimetype: 'audio/mp4' })
+let aa = conn.sendFile(m.chat, m, true, { mimetype: 'audio/mp4' })
 if (!aa) return conn.sendMessage(m.chat, { audio: { url: media }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
 } catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)

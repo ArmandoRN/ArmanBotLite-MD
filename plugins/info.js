@@ -56,7 +56,7 @@ let estado = `*╭𝄗𝄗✦ --${lenguajeGB.smsEstado1()}-- ✦𝄗𝄗⬣*
  ⎸ ┈┈┈┈┈┈┈┈┈┈┈
  ⎸ ❉ *${lenguajeGB.smsEstado7()}* ➺ *_${uptime}_*
 *╰𝄗𝄗𝄗𝄗𝄗⬣*`.trim()
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', estado, fkontak)
+await conn.sendFile(m.chat, estado, fkontak)
 } catch (e) {
 reportError(e)
 }   
@@ -96,7 +96,7 @@ _⭔ ${grupo[6]}_\n
 _⭔ ${grupo[7]}_\n
 _⭔ ${grupo[8]}_\n
 _⭔ ${grupo[9]}_`.trim()
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', str, fkontak)   
+await conn.sendFile(m.chat, str, fkontak)   
 } catch (e) {
 reportError(e)
 }    
@@ -105,7 +105,7 @@ break
 case isCommand4:
 try{ 
 _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', `*_${_package.homepage}_*\n\n` + lenguajeGB.smsPrivadoDonar(), fkontak)    
+await conn.sendFile(m.chat,`*_${_package.homepage}_*\n\n` + lenguajeGB.smsPrivadoDonar(), fkontak)    
 } catch (e) {
 reportError(e)
 }    
@@ -156,10 +156,9 @@ case isCommand6:
 try{   
 taguser = conn.getName(m.sender)
 _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-let pp = await conn.profilePictureUrl(`${global.conn.user.jid.split`@`[0]}` + '@s.whatsapp.net', 'image').catch(_ => gataImg.getRandom())
 let aa = `*_🍄 ${lenguajeGB.smsCreA()} ${taguser}, ${lenguajeGB.smsCreB()} ${_package.name} ${lenguajeGB.smsCreC()}_*\n\n` 
 let bb = `${packname}\n*◎ Wa.me/${owner[0][0]}*\n\n`
-await conn.sendFile(m.chat, pp, 'gata.jpg', aa + bb + ig, fkontak) 
+await conn.sendFile(m.chat, aa + bb + ig, fkontak) 
 } catch (e) {
 reportError(e)
 }    
@@ -213,7 +212,7 @@ let info = `
 🌻꙰᠁❥ *◜${lenguajeGB.smsVl1()}◞* ⇢ ${(speed * 1000).toFixed(0) / 1000}
 🌼꙰᠁❥ *◜${lenguajeGB.smsBT9()}◞* ⇢ ${totaljadibot.length}`.trim()
 
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', info, fkontak) 
+await conn.sendFile(m.chat, info, fkontak) 
 } catch (e) {
 reportError(e)
 }     
@@ -302,7 +301,7 @@ ${cpus[0] ? `*Uso total de la CPU*
 ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
 *CPU Core(s) Uso (${cpus.length} Core CPU)*
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}`
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', caption.trim(), fkontak) 
+await conn.sendFile(m.chat, caption.trim(), fkontak) 
 } catch (e) {
 reportError(e)
 }   
@@ -311,7 +310,7 @@ break
 case isCommand11:
 try { 
 let donar = lenguajeGB.smsMensajeDonar().trim()
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', lenguajeGB.smsTituloDonar() + '\n\n' + donar + '\n\n' + paypal + '\n' + ig, fkontak) 
+await conn.sendFile(m.chat, lenguajeGB.smsTituloDonar() + '\n\n' + donar + '\n\n' + paypal + '\n' + ig, fkontak) 
 await conn.reply(m.sender, lenguajeGB.smsPrivadoDonar() + '\n\n' + paypal + '\n' + md, m)
 } catch (e) {
 reportError(e)

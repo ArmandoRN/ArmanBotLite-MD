@@ -35,11 +35,11 @@ let caption = `${lenguajeGB.smsVerify7()}
 • ${age}
 
 *⎔ ${lenguajeGB.smsVerify9()}*
-• 'ͧͧͧͦꙶͣͤ✓ᚲᴳᴮ'
+✓'
 
 *⎔ ${lenguajeGB.smsPerfil5()}*
 • \`\`\`${sn}\`\`\``.trim()
-await conn.sendFile(m.chat, gataImg.getRandom(), 'gata.jpg', caption, m, false, { mentions: [aa] }) 
+await conn.sendFile(m.chat, caption, m, false, { mentions: [aa] }) 
 await m.reply(lenguajeGB.smsVerify8(usedPrefix)) 
 await m.reply(`${sn}`) 
 }

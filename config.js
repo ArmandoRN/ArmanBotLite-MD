@@ -12,13 +12,7 @@ import { en, es, id, ar, pt } from './lib/idiomas/total-idiomas.js'
 // ES ➜ Si desea recibir reportes debe de usar los tres parámetros (Número, nombre y true)
 // EN ➜ Add the Bot number as priority first
 // EN ➜ If you want to receive reports you must use the three parameters (Number, name and true)
-global.owner = [
-['593993684821', '𝙂𝙖𝙩𝙖𝘽𝙤𝙩𝙇𝙞𝙩𝙚-𝙈𝘿 🌻🐈', true], 
-['5492266466080', '𝙊𝙬𝙣𝙚𝙧 (1) 💻', true],  
-['972529277026', '𝙊𝙬𝙣𝙚𝙧 (2) 💻', true],  
-['59894808483', '𝘾𝙪𝙨𝙩𝙤𝙢𝙚𝙧 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 🥏', true],
-['50664668406', 'My Kim Dan', true],
-['593968585383'], ['59894808483'], ['5217441745001'], ['5492266613038']]
+global.owner = []
 
 global.mods = [] 
 global.prems = []
@@ -94,7 +88,7 @@ global.country = '' //agrega tú país ejemplo: 🇪🇨
 global.vs = '1.0.2'
 global.vsJB = '4.0'
 
-global.gt = '𝙂𝙖𝙩𝙖𝘽𝙤𝙩𝙇𝙞𝙩𝙚-𝙈𝘿'
+global.gt = 'ArmanBot'
 global.yt = 'https://youtube.com/@gatadios'
 global.yt2 = 'https://www.youtube.com/watch?v=Ko019wvu2Tc&t=71s'
 global.ig = 'https://www.instagram.com/gata_dios'
@@ -119,14 +113,13 @@ global.wm = 'ArmanBot : ArmanDios'
 global.igfg = '𝘽𝙤𝙩𝙇𝙞𝙩𝙚-𝙈𝘿'
 global.wait = lenguajeGB['smsMeWait']()
 global.wait2 = lenguajeGB.smsWait()
-global.nomorown = owner[0][0]
+global.nomorown = owner[0]
 
-/*
+
 global.imagen1 = fs.readFileSync('./media/menus/Menu3.jpg')
 global.imagen2 = fs.readFileSync('./media/menus/img1.jpg')
 global.imagen3 = fs.readFileSync('./media/menus/img2.jpg')
 global.imagen4 = fs.readFileSync('./media/menus/img3.jpg')
-global.imagen5 = fs.readFileSync('./media/menus/img4.jpg')
 global.imagen6 = fs.readFileSync('./media/menus/img5.jpg')
 global.imagen7 = fs.readFileSync('./media/menus/img6.jpg')
 global.imagen8 = fs.readFileSync('./media/menus/img7.jpg')
@@ -136,31 +129,31 @@ global.imagen11 = fs.readFileSync('./media/menus/img10.jpg')
 global.imagen12 = fs.readFileSync('./media/menus/img11.jpg')
 global.imagen13 = fs.readFileSync('./media/menus/img12.jpg')
 
-global.img = ''
-global.img2 = ''
-global.img3 = 'https://i.imgur.com/01Z8a0a.jpg' //ft rectangular
-global.img5 = 'https://i.imgur.com/80uz37R.jpeg'
-global.img6 = 'https://i.imgur.com/3zSvnGY.jpeg'
-global.img7 = 'https://i.imgur.com/WY4r6up.jpeg'
-global.img8 = 'https://i.imgur.com/qCO3RYa.jpeg'
-global.img9 = 'https://i.imgur.com/dWk51FS.jpeg'
-global.img10 = 'https://i.imgur.com/T4NjKMi.jpeg'
-global.img11 = 'https://i.imgur.com/jqyWSlh.jpeg'
-global.img12 = 'https://i.imgur.com/mpCRttm.jpeg'
-global.img13 = 'https://i.imgur.com/O04epJI.jpeg'
-global.img14 = 'https://i.imgur.com/jfbuJRU.jpeg'
-global.img15 = 'https://i.imgur.com/DzqUXkW.jpeg'
-global.img17 = 'https://i.imgur.com/Y3ZWq7z.jpeg'
-global.img18 = 'https://i.imgur.com/kaUN1Nz.jpeg'
-global.img19 = 'https://i.imgur.com/7yJ22hJ.jpeg'
-global.img20 = 'https://i.imgur.com/qcD353P.jpeg'
-global.img21 = 'https://i.imgur.com/3fJTaX6.jpeg'
-global.img21 = 'https://i.imgur.com/akofqcE.jpeg' //paypal
-*/
-/*global.welgata = [ig, yt2, yt2, ig, md, ig, yt, paypal, yt2, yt2, ig, fb]
-global.redesMenu = [nna, nn, nnn, nnnt, nnntt, nnnttt, nnnttt1, nnnttt2, nnnttt3, nnnttt4, md, ig, paypal, yt, asistencia, fb]
-global.gataMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18, img19, img20, img21]
-global.gataImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13]
+global.img = '/media/menus/Menu3.jpg'
+global.img2 = '/media/menus/Menu3.jpg'
+global.img3 = '/media/menus/Menu3.jpg' //ft rectangular
+global.img5 = '/media/menus/Menu3.jpg'
+global.img6 = '/media/menus/Menu3.jpg'
+global.img7 = '/media/menus/Menu3.jpg'
+global.img8 = '/media/menus/Menu3.jpg'
+global.img9 = '/media/menus/Menu3.jpg'
+global.img10 = '/media/menus/Menu3.jpg'
+global.img11 = '/media/menus/Menu3.jpg'
+global.img12 = '/media/menus/Menu3.jpg'
+global.img13 = '/media/menus/Menu3.jpg'
+global.img14 = '/media/menus/Menu3.jpg'
+global.img15 = '/media/menus/Menu3.jpg'
+global.img17 = '/media/menus/Menu3.jpg'
+global.img18 = '/media/menus/Menu3.jpg'
+global.img19 = '/media/menus/Menu3.jpg'
+global.img20 = '/media/menus/Menu3.jpg'
+global.img21 = '/media/menus/Menu3.jpg'
+global.img21 = '/media/menus/Menu3.jpg' //paypal
+
+global.welgata = [img]
+global.redesMenu = [img]
+global.gataMenu = [img]
+
 
 global.htki = '*⭑•̩̩͙⊱•••• ☪*'
 global.htka = '*☪ ••••̩̩͙⊰•⭑*'
@@ -173,7 +166,7 @@ global.sent = '❇️'
 global.notsent = '❗'
 global.waitemot = '⌛'
 global.waitemot2 = '⏳'
-*/
+
 global.multiplier = 60 // Cuanto más alto, más difícil subir de nivel 
 
 let file = fileURLToPath(import.meta.url)
